@@ -1,0 +1,19 @@
+{
+  "name": "rx-state-manager",
+  "version": "1.0.0",
+  "exports": "./src/index.ts",
+  "types": "./dist/index.d.ts",
+  "repository": "https://github.com/Frix-G/rx-state-manager.git",
+  "author": "g.frix <gwen.frix@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc"
+  },
+  "dependencies": {
+    "rxjs": "^7.5.5",
+    "typescript": "^4.6.3"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.23"
+  }
+}
