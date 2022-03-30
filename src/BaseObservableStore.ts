@@ -22,7 +22,6 @@ export abstract class BaseObservableStore<T extends State> {
   readonly state$: Observable<T> = this._state$.asObservable();
   readonly selectors: ObservableState<T> = this.initSelectors();
   readonly setters: StateSetters<T> = this.initSetters();
-  abstract readonly initialState: T;
 
   protected abstract getInitialState(): T;
 
@@ -61,7 +60,7 @@ export abstract class BaseObservableStore<T extends State> {
   }
 
   public resetState(): void {
-    this.updateState(this.initialState);
+    this.updateState(this.getInitialState());
   }
 
   protected updatePortionOfState(key: keyof T, value: any): void {
